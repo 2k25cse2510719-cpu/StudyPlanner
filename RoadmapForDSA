@@ -1,0 +1,74 @@
+Phase 1: Arrays & Strings
+• Traversal
+• Simulation
+• Prefix Sum
+• Two Pointers
+• Sliding Window
+• Hashing (unordered_map, unordered_set)
+• Sorting
+Phase 2: Searching
+• Binary Search
+• Lower Bound
+• Upper Bound
+• Search on Answer
+• Rotated Array Binary Search
+Phase 3: Linked Lists
+• Fast & Slow Pointer
+• Reverse Linked List
+• Merge Lists
+Phase 4: Stacks & Queues
+• Stack
+• Monotonic Stack
+• Queue
+• Monotonic Queue
+Phase 5: Trees
+• DFS
+• BFS (Level Order)
+• Binary Search Tree
+Phase 6: Heap
+• Priority Queue
+• Max Heap
+• Min Heap
+Phase 7: Backtracking
+• Permutations
+• Combinations
+• Subsets
+• N-Queens
+Phase 8: Greedy
+• Jump Game
+• Gas Station
+• Interval Scheduling
+Phase 9: Graphs
+• DFS
+• BFS
+• Union Find (DSU)
+• Topological Sort
+• Dijkstra
+• Minimum Spanning Tree
+Phase 10: Dynamic Programming
+• 1D DP
+• 2D DP
+• Knapsack
+• Longest Increasing Subsequence (LIS)
+• Longest Common Subsequence (LCS)
+Phase 11: Advanced
+• Trie
+• Segment Tree
+• Fenwick Tree (Binary Indexed Tree)
+• Bit Manipulation
+Learning Order
+1. Arrays
+2. Sorting
+3. Hashing
+4. Two Pointers
+5. Sliding Window
+6. Binary Search
+7. Stack
+8. Queue
+9. Linked List
+10. Trees
+11. Heap
+12. Greedy
+13. Backtracking
+14. Graphs
+15. Dynamic Programmin
