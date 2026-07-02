@@ -1,0 +1,428 @@
+Chapter 1: What is Hashing?
+
+Imagine you're a teacher.
+
+A student asks
+
+"How many times did Rahul come to class?"
+
+Method 1 (Without hashing)
+
+You check the attendance register.
+
+Rahul
+Ankit
+Rahul
+Ishan
+Rahul
+Aryan
+
+You scan every page.
+
+Time = O(n)
+
+Method 2 (With hashing)
+
+You already have a notebook like
+
+Rahul -> 3
+
+Ankit ->1
+
+Ishan ->1
+
+Aryan ->1
+
+Student asks again
+
+Rahul?
+
+You immediately answer
+
+3
+
+Time = O(1)
+
+This notebook is called a Hash Table.
+
+Hashing simply means
+
+Store data so you can find it very quickly.
+
+Real Life Example
+
+Your phone contacts.
+
+Suppose you save
+
+Rahul
+Ishan
+Aryan
+
+When you type
+
+Ish
+
+It instantly finds
+
+Ishan
+
+Your phone is using hashing internally.
+
+Think of Hashing Like This
+
+Instead of searching
+
+1
+2
+3
+4
+5
+6
+7
+
+every time,
+
+you directly know
+
+4 is stored here.
+
+No searching.
+
+Direct lookup.
+
+Chapter 2: STL Containers Used for Hashing
+
+There are three important ones.
+
+1) unordered_map
+
+Stores
+
+Key -> Value
+
+Example
+
+unordered_map<string,int> mp;
+
+mp["Rahul"]=90;
+mp["Ishan"]=95;
+mp["Aryan"]=88;
+
+Now
+
+cout<<mp["Ishan"];
+
+prints
+
+95
+2) unordered_set
+
+Stores only unique values.
+
+unordered_set<int> s;
+
+s.insert(5);
+s.insert(10);
+s.insert(5);
+
+Result
+
+5
+10
+
+Duplicate removed automatically.
+
+Useful for checking
+
+"Have I seen this before?"
+
+3) map
+
+Works like unordered_map but keeps keys sorted.
+
+1
+2
+3
+4
+5
+
+instead of random order.
+
+Searching
+
+O(log n)
+
+instead of average
+
+O(1)
+
+In interviews,
+
+Most of the time
+
+unordered_map
+
+is preferred.
+
+Chapter 3: Why O(1)?
+
+Suppose
+
+1000000 numbers
+
+Without hashing
+
+Finding
+
+999999
+
+means searching almost everything.
+
+O(n)
+
+With hashing
+
+999999
+
+directly jumps to its location.
+
+Average
+
+O(1)
+Chapter 4: Frequency Counting
+
+This is THE most common hashing application.
+
+Suppose
+
+nums
+
+1 2 2 3 1 1 5
+
+We want
+
+1 occurs 3 times
+
+2 occurs 2 times
+
+3 occurs 1 time
+
+5 occurs 1 time
+
+How?
+
+unordered_map<int,int> freq;
+
+for(int x:nums)
+{
+    freq[x]++;
+}
+
+After loop
+
+1 ->3
+
+2 ->2
+
+3 ->1
+
+5 ->1
+
+Done.
+
+Visualization
+
+Start
+
+{}
+
+Read
+
+1
+1->1
+
+Read
+
+2
+1->1
+
+2->1
+
+Read
+
+2
+1->1
+
+2->2
+
+Read
+
+1
+1->2
+
+2->2
+
+Eventually
+
+1->3
+
+2->2
+
+3->1
+
+5->1
+Chapter 5: Presence Checking
+
+Question
+
+Does array contain 7?
+
+Without hashing
+
+for(...)
+
+O(n)
+
+With hashing
+
+unordered_set<int> st;
+
+for(int x:nums)
+    st.insert(x);
+
+if(st.count(7))
+
+Done.
+
+Average
+
+O(1)
+Chapter 6: The Biggest Hint
+
+Whenever you hear
+
+Frequency
+
+Think
+
+unordered_map
+
+Whenever you hear
+
+Duplicate
+
+Think
+
+unordered_set
+
+Whenever you hear
+
+Seen before
+
+Think
+
+unordered_set
+
+Whenever you hear
+
+Count occurrences
+
+Think
+
+unordered_map
+
+Whenever you hear
+
+Character frequency
+
+Think
+
+unordered_map<char,int>
+
+Whenever you hear
+
+Word frequency
+
+Think
+
+unordered_map<string,int>
+Chapter 7: Common Operations
+Insert
+mp[5]=10;
+
+means
+
+Key =5
+
+Value =10
+Increase Frequency
+mp[5]++;
+
+If
+
+5
+
+doesn't exist,
+
+C++ automatically creates
+
+5->0
+
+then increments
+
+5->1
+Find
+if(mp.find(5)!=mp.end())
+
+Means
+
+Does key 5 exist?
+
+Shortcut
+
+if(mp.count(5))
+
+Returns
+
+1
+
+if present
+
+0
+
+otherwise.
+
+Erase
+mp.erase(5);
+
+Deletes
+
+5
+Chapter 8: Pattern Recognition
+
+When should your brain scream
+
+"HASHING!!"
+
+If question says
+
+✅ Count frequency
+
+✅ First unique element
+
+✅ Duplicate element
+
+✅ Contains duplicate
+
+✅ Pair exists
+
+✅ Common elements
+
+✅ Group same values
+
+✅ Count characters
+
+✅ Anagrams
+
+Hashing is probably involved.
