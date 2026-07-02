@@ -1,0 +1,420 @@
+Chapter 1: Why Do We Need Sliding Window?
+
+Suppose the array is
+
+[2, 4, 1, 6, 3, 8]
+
+Question:
+
+Find the maximum sum of 3 consecutive elements.
+
+Brute Force
+
+Check every possible group.
+
+2 4 1 = 7
+
+4 1 6 = 11
+
+1 6 3 = 10
+
+6 3 8 = 17
+
+Maximum = 17
+
+Code:
+
+for(int i = 0; i <= n-k; i++)
+{
+    int sum = 0;
+
+    for(int j = i; j < i+k; j++)
+        sum += nums[j];
+}
+
+Time Complexity:
+
+O(n*k)
+
+If
+
+n = 100000
+k = 50000
+
+this becomes extremely slow.
+
+Chapter 2: Observe Something
+
+Look carefully.
+
+First window
+
+2 4 1
+
+Sum = 7
+
+Next window
+
+4 1 6
+
+Do we really need to calculate
+
+4+1+6
+
+again?
+
+No.
+
+Notice what happened.
+
+We removed
+
+2
+
+and added
+
+6
+
+So
+
+New Sum
+
+=
+
+Old Sum
+
+- Leaving Element
+
++ Entering Element
+
+This is the entire idea of Sliding Window.
+
+Visualization
+
+Window size = 3
+
+[2 4 1] 6 3 8
+
+Sum = 7
+
+Slide →
+
+2 [4 1 6] 3 8
+
+Instead of
+
+4+1+6
+
+do
+
+7
+
+-2
+
++6
+
+=11
+
+Slide →
+
+2 4 [1 6 3] 8
+11
+
+-4
+
++3
+
+=10
+
+Slide →
+
+2 4 1 [6 3 8]
+10
+
+-1
+
++8
+
+=17
+
+Done.
+
+Chapter 3: Fixed Sliding Window
+
+This is the easiest version.
+
+The window size never changes.
+
+Examples:
+
+Maximum sum of 5 elements
+Average of K numbers
+Maximum score in K cards
+First negative number in every window
+
+Window Size
+
+Always K
+Code Pattern
+int sum = 0;
+
+// First window
+for(int i = 0; i < k; i++)
+    sum += nums[i];
+
+int ans = sum;
+
+// Slide
+for(int i = k; i < nums.size(); i++)
+{
+    sum += nums[i];
+    sum -= nums[i-k];
+
+    ans = max(ans, sum);
+}
+
+Notice
+
+sum += nums[i];
+
+New element enters.
+
+sum -= nums[i-k];
+
+Old element leaves.
+
+Chapter 4: Window Analogy
+
+Imagine a train with exactly 3 seats.
+
+Passengers:
+
+A B C D E F
+
+Initially
+
+[A B C]
+
+Move forward
+
+A [B C D]
+
+One passenger leaves.
+
+One passenger enters.
+
+The train still has 3 seats.
+
+Exactly what Sliding Window does.
+
+Chapter 5: Variable Sliding Window
+
+Now things get interesting.
+
+Question:
+
+Find the longest substring without repeating characters.
+
+Can we keep window size fixed?
+
+No.
+
+Sometimes
+
+abc
+
+Sometimes
+
+abcdef
+
+Sometimes
+
+ab
+
+Window size changes.
+
+We keep
+
+Left Pointer (L)
+
+Right Pointer (R)
+
+Initially
+
+L
+↓
+
+a b c d
+↑
+R
+
+Move Right
+
+a b c d
+  ↑
+  R
+
+If everything is valid,
+
+expand.
+
+If condition breaks,
+
+move Left until valid again.
+
+Chapter 6: Variable Window Example
+
+Question:
+
+Longest subarray with sum ≤ 10
+
+Array
+
+2 3 4 5 1
+
+Start
+
+[2]
+
+Sum = 2
+
+Expand
+
+[2 3]
+
+Sum = 5
+
+Expand
+
+[2 3 4]
+
+Sum = 9
+
+Expand
+
+[2 3 4 5]
+
+Sum = 14 ❌
+
+Too big.
+
+Shrink from left.
+
+Remove
+
+2
+
+Now
+
+[3 4 5]
+
+Still 12 ❌
+
+Remove
+
+3
+
+Now
+
+[4 5]
+
+Sum = 9 ✅
+
+Continue expanding.
+
+Variable Window Template
+int left = 0;
+
+for(int right = 0; right < n; right++)
+{
+    // Include nums[right]
+
+    while(condition is broken)
+    {
+        // Remove nums[left]
+        left++;
+    }
+
+    // Update answer
+}
+
+You'll use this exact template dozens of times.
+
+Chapter 7: Fixed vs Variable
+Fixed Window	Variable Window
+Size always K	Size changes
+One loop after building first window	Two pointers
+Easier	More common in interviews
+Questions mention K	Questions mention longest, shortest, at most, no duplicates
+Chapter 8: When Should Your Brain Think "Sliding Window"?
+
+Whenever the problem mentions:
+
+✅ Consecutive elements
+
+✅ Continuous subarray
+
+✅ Continuous substring
+
+✅ Window of size K
+
+✅ Longest substring
+
+✅ Shortest subarray
+
+✅ At most K
+
+✅ Exactly K
+
+These are huge clues.
+
+Chapter 9: Decision Tree
+               Read Question
+                      │
+          ┌───────────┴────────────┐
+          │                        │
+      Window size fixed?      Window size changes?
+          │                        │
+          ▼                        ▼
+ Fixed Sliding Window      Variable Sliding Window
+Chapter 10: Sliding Window + Hashing
+
+This is where medium problems begin.
+
+Example:
+
+Longest substring without repeating characters.
+
+Need to know
+
+Have I already seen this character?
+
+Brain says
+
+Hashing
+
+Need a moving window
+
+Sliding Window
+
+So the solution is
+
+Sliding Window
+
++
+
+Hashing
+
+Many famous interview questions use this combination.
+
+Complexity
+
+Without Sliding Window
+
+O(n × k)
+
+With Sliding Window
+
+O(n)
+
+Each element enters the window once and leaves at most once.
