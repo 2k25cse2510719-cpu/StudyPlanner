@@ -1,119 +1,282 @@
-Phase 1: Arrays & Strings
-• Traversal
-• Simulation
-• Prefix Sum
-• Two Pointers
-• Sliding Window
-• Hashing (unordered_map, unordered_set)
-• Sorting
-Matrix Traversal
-String Algorithms
-Phase 2: Searching
-• Binary Search
-• Lower Bound
-• Upper Bound
-• Search on Answer
-• Rotated Array Binary Search
-Peak Element
-Phase 3: Linked Lists
-• Fast & Slow Pointer
-• Reverse Linked List
-• Merge Lists
-Phase 4: Stacks & Queues
-• Stack
-• Monotonic Stack
-• Queue
-• Monotonic Queue
-Phase 5: Trees
-• DFS
-• BFS (Level Order)
-• Binary Search Tree
-Tree Traversals
-Lowest Common Ancestor (LCA)
-Tree Diameter
-Tree DP (optional)
-Phase 6: Heap
-• Priority Queue
-• Max Heap
-• Min Heap
-Top K Problems
-Merge K Sorted Lists
-Median Finder (Two Heaps)
-Phase 7: Backtracking
-• Permutations
-• Combinations
-• Subsets
-• N-Queens
-Phase 8: Greedy
-• Jump Game
-• Gas Station
-• Interval 
-Scheduling
-Activity Selection
-Huffman Coding (theory)
-Phase 9: Graphs
-DFS
-BFS
-Flood Fill
-Connected Components
-Union Find (DSU)
-Topological Sort
-Shortest Path
-    Dijkstra
-    Bellman-Ford
-    Floyd-Warshall
-Minimum Spanning Tree
-    Kruskal
-    Prim
-Phase 10: Dynamic Programming
-1D DP
-2D DP
-Knapsack
-LIS
-LCS
-Grid DP
-Partition DP
-Interval DP
-Bitmask DP (advanced)
-Tree DP (advanced)
-Phase 11: Advanced
-Trie
-Segment Tree
-Fenwick Tree
-Bit Manipulation
-Sparse Table
-Suffix Array (optional)
-Suffix Automaton (very advanced)
-Phase 12:
-Prime Numbers
-Sieve of Eratosthenes
-GCD & LCM
-Euclidean Algorithm
-Modular Arithmetic
-Fast Exponentiation
-Combinatorics
-Phase 13:
-Recursion
-Divide & Conquer
-Meet in the Middle
-Sweep Line
-Difference Array
-Coordinate Compression
-Prefix XOR
+# 🚀 DSA Roadmap
 
-Learning Order
-1. Arrays
-2. Sorting
-3. Hashing
-4. Two Pointers
-5. Sliding Window
-6. Binary Search
-7. Stack
-8. Queue
-9. Linked List
-10. Trees
-11. Heap
-12. Greedy
-13. Backtracking
-14. Graphs
-15. Dynamic Programmin
+A structured roadmap covering **Data Structures, Algorithms, Problem-Solving Patterns, and Advanced Topics**.
+
+---
+
+## 🧭 Learning Order
+
+> Follow this order for a smooth progression from fundamentals to advanced DSA.
+
+|  # | Topic                  |
+| -: | ---------------------- |
+| 01 | 🟢 Arrays              |
+| 02 | 🟢 Sorting             |
+| 03 | 🟢 Hashing             |
+| 04 | 🟢 Two Pointers        |
+| 05 | 🟢 Sliding Window      |
+| 06 | 🟡 Binary Search       |
+| 07 | 🟡 Stack               |
+| 08 | 🟡 Queue               |
+| 09 | 🟡 Linked List         |
+| 10 | 🟠 Trees               |
+| 11 | 🟠 Heap                |
+| 12 | 🟠 Greedy              |
+| 13 | 🟠 Backtracking        |
+| 14 | 🔴 Graphs              |
+| 15 | 🔴 Dynamic Programming |
+
+---
+
+# 📚 DSA Roadmap
+
+## 🟢 Phase 01 — Arrays & Strings
+
+### Core Concepts
+
+* Traversal
+* Simulation
+* Prefix Sum
+* Two Pointers
+* Sliding Window
+* Hashing
+
+  * `unordered_map`
+  * `unordered_set`
+* Sorting
+* Matrix Traversal
+* String Algorithms
+
+---
+
+## 🟢 Phase 02 — Searching
+
+### Binary Search
+
+* Binary Search
+* Lower Bound
+* Upper Bound
+* Search on Answer
+* Rotated Array Binary Search
+* Peak Element
+
+---
+
+## 🟡 Phase 03 — Linked Lists
+
+### Core Techniques
+
+* Fast & Slow Pointer
+* Reverse Linked List
+* Merge Lists
+
+---
+
+## 🟡 Phase 04 — Stacks & Queues
+
+### Stack
+
+* Stack
+* Monotonic Stack
+
+### Queue
+
+* Queue
+* Monotonic Queue
+
+---
+
+## 🟠 Phase 05 — Trees
+
+### Traversal
+
+* DFS
+* BFS / Level Order
+* Tree Traversals
+
+### Binary Trees & BST
+
+* Binary Search Tree
+* Lowest Common Ancestor — **LCA**
+* Tree Diameter
+
+### Advanced
+
+* Tree DP *(Optional)*
+
+---
+
+## 🟠 Phase 06 — Heap
+
+### Heap Fundamentals
+
+* Priority Queue
+* Max Heap
+* Min Heap
+
+### Problem Patterns
+
+* Top K Problems
+* Merge K Sorted Lists
+* Median Finder — **Two Heaps**
+
+---
+
+## 🟠 Phase 07 — Backtracking
+
+* Permutations
+* Combinations
+* Subsets
+* N-Queens
+
+---
+
+## 🟠 Phase 08 — Greedy
+
+### Problems & Patterns
+
+* Jump Game
+* Gas Station
+* Interval Scheduling
+* Activity Selection
+
+### Theory
+
+* Huffman Coding
+
+---
+
+# 🔴 Phase 09 — Graphs
+
+### Traversal
+
+* DFS
+* BFS
+* Flood Fill
+* Connected Components
+
+### Connectivity
+
+* Union Find — **DSU**
+
+### Ordering
+
+* Topological Sort
+
+### Shortest Path
+
+* Dijkstra
+* Bellman-Ford
+* Floyd-Warshall
+
+### Minimum Spanning Tree
+
+* Kruskal
+* Prim
+
+---
+
+# 🔴 Phase 10 — Dynamic Programming
+
+### Fundamentals
+
+* 1D DP
+* 2D DP
+
+### Classic Problems
+
+* Knapsack
+* LIS — Longest Increasing Subsequence
+* LCS — Longest Common Subsequence
+* Grid DP
+
+### Advanced DP
+
+* Partition DP
+* Interval DP
+* Bitmask DP
+* Tree DP
+
+---
+
+# 🟣 Phase 11 — Advanced Data Structures & Algorithms
+
+### Data Structures
+
+* Trie
+* Segment Tree
+* Fenwick Tree
+* Sparse Table
+
+### Algorithms
+
+* Bit Manipulation
+* Suffix Array *(Optional)*
+* Suffix Automaton *(Very Advanced)*
+
+---
+
+# 🔵 Phase 12 — Mathematics for DSA
+
+### Number Theory
+
+* Prime Numbers
+* Sieve of Eratosthenes
+* GCD & LCM
+* Euclidean Algorithm
+
+### Modular Mathematics
+
+* Modular Arithmetic
+* Fast Exponentiation
+
+### Combinatorics
+
+* Combinatorics
+
+---
+
+# 🟣 Phase 13 — Advanced Problem-Solving Techniques
+
+* Recursion
+* Divide & Conquer
+* Meet in the Middle
+* Sweep Line
+* Difference Array
+* Coordinate Compression
+* Prefix XOR
+
+---
+
+# 📈 Progress Tracker
+
+| Phase | Topic               | Status |
+| :---: | ------------------- | :----: |
+|   01  | Arrays & Strings    |    ⬜   |
+|   02  | Searching           |    ⬜   |
+|   03  | Linked Lists        |    ⬜   |
+|   04  | Stacks & Queues     |    ⬜   |
+|   05  | Trees               |    ⬜   |
+|   06  | Heap                |    ⬜   |
+|   07  | Backtracking        |    ⬜   |
+|   08  | Greedy              |    ⬜   |
+|   09  | Graphs              |    ⬜   |
+|   10  | Dynamic Programming |    ⬜   |
+|   11  | Advanced            |    ⬜   |
+|   12  | Mathematics         |    ⬜   |
+|   13  | Advanced Techniques |    ⬜   |
+
+### Legend
+
+* ⬜ Not Started
+* 🟡 In Progress
+* 🟢 Completed
+* 🔄 Revising
+
+---
+
+## 🎯 Goal
+
+> **Solve problems. Understand patterns. Build intuition. Repeat.**
+
+**Arrays → Searching → Linked Lists → Trees → Heap → Greedy → Backtracking → Graphs → DP → Advanced**
